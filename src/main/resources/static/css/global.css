@@ -88,11 +88,40 @@ a:hover {
     text-decoration: underline;
 }
 
+/* Outline Button - Custom styling for outline buttons to match bakery theme */
+.btn-outline-primary {
+    color: #8b4513;
+    background-color: transparent;
+    border: 2px solid #d4a76a;
+    transition: all 0.3s ease;
+}
+
+/* Outline Button - Hover state */
+.btn-outline-primary:hover {
+    color: #fff;
+    background-color: #d4a76a;
+    border-color: #c09358;
+}
+
+/* Outline Button - Focus state */
+.btn-outline-primary:focus, 
+.btn-outline-primary.focus {
+    box-shadow: 0 0 0 0.2rem rgba(212, 167, 106, 0.5);
+}
+
+/* Outline Button - Active state */
+.btn-outline-primary:not(:disabled):not(.disabled):active,
+.btn-outline-primary:not(:disabled):not(.disabled).active {
+    color: #fff;
+    background-color: #c09358;
+    border-color: #a36f2e;
+}
+
 /* Search Functionality Section */
 
 /* Search Container - Creates a visually separate area for search controls */
 .search-container {
-    background-color: #f8e0d0; /* Light peach background */
+    background-color: #f8e0d0;
     border-radius: 8px;
     padding: 15px;
     margin-bottom: 20px;

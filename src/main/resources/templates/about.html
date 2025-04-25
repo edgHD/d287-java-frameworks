@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" th:href="@{/css/global.css}">
+
+    <title>About - Sweet Delights Bakery</title>
+</head>
+<body>
+<div class="container">
+    <h1><span class="bakery-icon">🏠</span>About Sweet Delights Bakery</h1>
+    <p class="lead">Handcrafted baked goods made with love since 2010</p>
+    <hr>
+    
+    <!-- Navigation -->
+    <nav class="mb-4">
+        <a th:href="@{/}" class="btn btn-outline-primary">
+            <span class="bakery-icon">🍞</span>Return to Main Page
+        </a>
+    </nav>
+    
+    <div class="row">
+        <div class="col-md-6">
+            <h2><span class="bakery-icon">📜</span>Our Story</h2>
+            <p>
+                Sweet Delights Bakery was founded in 2010 by a family of passionate bakers with a dream of bringing 
+                traditional recipes with modern twists to our community. What started as a small corner shop has 
+                grown into a beloved local institution, known for quality ingredients and exceptional taste.
+            </p>
+            <p>
+                Our recipes have been passed down through generations, perfected over time, and enhanced with 
+                our commitment to using only the finest ingredients. Every loaf of bread, every pastry, and every 
+                cake that leaves our kitchen is made with care and attention to detail.
+            </p>
+        </div>
+        <div class="col-md-6">
+            <h2><span class="bakery-icon">🌱</span>Our Ingredients</h2>
+            <p>
+                At Sweet Delights, we believe that exceptional baked goods start with exceptional ingredients. 
+                We source locally whenever possible, working with regional farmers and suppliers to ensure that 
+                our flour, eggs, butter, and other key ingredients are fresh and of the highest quality.
+            </p>
+            <p>
+                We're proud to maintain relationships with our suppliers, many of whom have been working with us 
+                since our founding. This commitment to quality ingredients is what sets our baked goods apart.
+            </p>
+        </div>
+    </div>
+    
+    <div class="row mt-4">
+        <div class="col-md-6">
+            <h2><span class="bakery-icon">👨‍👩‍👧‍👦</span>Our Team</h2>
+            <p>
+                Our talented team of bakers begins work in the early hours of the morning to ensure that 
+                fresh baked goods are available daily. With decades of combined experience, our bakers blend 
+                traditional techniques with innovative approaches to create something truly special.
+            </p>
+            <p>
+                From our master bakers to our friendly front-of-house staff, everyone at Sweet Delights is 
+                committed to making your experience memorable. We love what we do, and we think you'll taste 
+                the difference that passion makes.
+            </p>
+        </div>
+        <div class="col-md-6">
+            <h2><span class="bakery-icon">🎯</span>Our Mission</h2>
+            <p>
+                Our mission is simple: to create delicious baked goods that bring joy to our customers while 
+                supporting our local community. We strive to make every customer interaction a positive one, 
+                whether you're stopping in for your daily bread or ordering a custom cake for a special occasion.
+            </p>
+            <p>
+                We're also committed to sustainability, using eco-friendly packaging whenever possible and 
+                minimizing food waste through careful planning and community donation programs.
+            </p>
+        </div>
+    </div>
+    
+    <div class="row mt-4">
+        <div class="col-12">
+            <h2><span class="bakery-icon">🥐</span>Our Specialties</h2>
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="card mb-3">
+                        <div class="card-body text-center">
+                            <h3 class="h5">Artisan Breads</h3>
+                            <p class="bakery-icon" style="font-size: 2.5em;">🍞</p>
+                            <p class="small">Sourdough, Country Loaf, Baguettes, Ciabatta</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card mb-3">
+                        <div class="card-body text-center">
+                            <h3 class="h5">Pastries</h3>
+                            <p class="bakery-icon" style="font-size: 2.5em;">🥐</p>
+                            <p class="small">Croissants, Danish, Turnovers, Morning Buns</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card mb-3">
+                        <div class="card-body text-center">
+                            <h3 class="h5">Cakes</h3>
+                            <p class="bakery-icon" style="font-size: 2.5em;">🎂</p>
+                            <p class="small">Birthday, Wedding, Custom Designs, Cupcakes</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card mb-3">
+                        <div class="card-body text-center">
+                            <h3 class="h5">Cookies</h3>
+                            <p class="bakery-icon" style="font-size: 2.5em;">🍪</p>
+                            <p class="small">Chocolate Chip, Shortbread, Macarons, Biscotti</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="row mt-4">
+        <div class="col-12">
+            <h2><span class="bakery-icon">📍</span>Visit Us</h2>
+            <p>
+                <strong>Address:</strong> 123 Main Street, Bakerytown, BT 12345<br>
+                <strong>Hours:</strong> Monday-Friday 7am-6pm, Saturday 8am-4pm, Sunday 8am-2pm<br>
+                <strong>Phone:</strong> (555) 123-4567<br>
+                <strong>Email:</strong> info@sweetdelightsbakery.com
+            </p>
+        </div>
+    </div>
+    
+    <!-- Navigation -->
+    <div class="mt-4 text-center">
+        <a th:href="@{/}" class="btn btn-outline-primary">
+            <span class="bakery-icon">🍞</span>Return to Main Page
+        </a>
+    </div>
+    
+    <footer class="mt-4 text-center text-muted">
+        <small>Sweet Delights Bakery - Baking happiness since 2010</small>
+    </footer>
+</div>
+</body>
+</html>

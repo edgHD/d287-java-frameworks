@@ -21,6 +21,13 @@
 <div class="container">
     <h1><span class="bakery-icon">🥐</span>Sweet Delights Bakery<span class="bakery-icon">🍰</span></h1>
     <p class="lead">Fresh baked goods made with love and quality ingredients</p>
+
+    <div class="text-end mb-2">
+        <a th:href="@{about}" class="btn btn-outline-primary">
+            <span class="bakery-icon">🏠</span>About Us
+        </a>
+    </div>
+
     <hr>
     <h2><span class="bakery-icon">🧂</span>Baking Ingredients</h2>
     <div class="search-container">
@@ -98,6 +105,9 @@
     </table>
     <footer class="mt-4 text-center text-muted">
         <small>Specializing in Breads, Cakes, Cookies, and Pastries made with the finest Flour, Sugar, Eggs, Butter, and Frosting</small>
+        <div class="mt-2">
+            <a th:href="@{about}" class="text-muted">About Us</a>
+        </div>
     </footer>
 </div>
 </body>
