@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" th:href="@{/css/global.css}">
+
+    <title>Sweet Delights Bakery</title>
+</head>
+<body>
+
+<div class="container">
+    <h1><span class="bakery-icon">🥐</span>Sweet Delights Bakery<span class="bakery-icon">🍰</span></h1>
+    <p class="lead">Fresh baked goods made with love and quality ingredients</p>
+    <hr>
+    <h2><span class="bakery-icon">🧂</span>Baking Ingredients</h2>
+    <div class="search-container">
+        <form th:action="@{/mainscreen}" class="search-form">
+            <label for="partkeyword" class="search-label"><span class="bakery-icon">🔍</span>Find Ingredients:</label>
+            <input type="text" name="partkeyword" id="partkeyword" class="search-input" 
+                   th:value="${partkeyword}" placeholder="Search by ingredient name..." required />
+            <div class="button-container">
+                <input type="submit" value="Search" class="search-button" />
+                <input type="button" value="Clear" id="btnClearPart" onclick="clearSearch()" class="clear-button" />
+            </div>
+        </form>
+    </div>
+    <a th:href="@{/showFormAddInPart}" class="btn btn-primary btn-sm mb-3">Add Store Ingredient</a>
+    <a th:href="@{/showFormAddOutPart}" class="btn btn-primary btn-sm mb-3">Add Supplier Ingredient</a>
+    <table class="table table-bordered table-striped">
+        <thead class="thead-dark">
+        <tr>
+            <th>Ingredient</th>
+            <th>Price</th>
+            <th>Stock Level</th>
+            <th>Action</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="tempPart : ${parts}">
+            <td th:text="${tempPart.name}">Flour</td>
+            <td th:text="${tempPart.price}">2.99</td>
+            <td th:text="${tempPart.inv}">50</td>
+            <td><a th:href="@{/showPartFormForUpdate(partID=${tempPart.id})}" class="btn btn-primary btn-sm mb-3">Update</a>
+                <a th:href="@{/deletepart(partID=${tempPart.id})}" class="btn btn-primary btn-sm mb-3"
+                   onclick="if(!(confirm('Are you sure you want to delete this ingredient?')))return false">Delete</a>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+    <h2><span class="bakery-icon">🍞</span>Baked Goods</h2>
+    <div class="search-container">
+        <form th:action="@{/mainscreen}" class="search-form">
+            <label for="productkeyword" class="search-label"><span class="bakery-icon">🔍</span>Find Baked Goods:</label>
+            <input type="text" name="productkeyword" id="productkeyword" class="search-input" 
+                   th:value="${productkeyword}" placeholder="Search by baked good name..." required />
+            <div class="button-container">
+                <input type="submit" value="Search" class="search-button" />
+                <input type="button" value="Clear" id="btnClearProduct" onclick="clearSearch()" class="clear-button" />
+            </div>
+        </form>
+    </div>
+    <script type="text/javascript">
+        function clearSearch() {
+            window.location = "[[@{/}]]";
+        }
+    </script>
+    <a th:href="@{/showFormAddProduct}" class="btn btn-primary btn-sm mb-3">Add Baked Good</a>
+    <table class="table table-bordered table-striped">
+        <thead class="thead-dark">
+        <tr>
+            <th>Item</th>
+            <th>Price</th>
+            <th>Available</th>
+            <th>Action</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="tempProduct : ${products}">
+            <td th:text="${tempProduct.name}">Sourdough Bread</td>
+            <td th:text="${tempProduct.price}">4.99</td>
+            <td th:text="${tempProduct.inv}">12</td>
+            <td><a th:href="@{/showProductFormForUpdate(productID=${tempProduct.id})}" class="btn btn-primary btn-sm mb-3">Update</a>
+                <a th:href="@{/deleteproduct(productID=${tempProduct.id})}" class="btn btn-primary btn-sm mb-3"
+                   onclick="if(!(confirm('Are you sure you want to delete this baked good?')))return false">Delete</a>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+    <footer class="mt-4 text-center text-muted">
+        <small>Specializing in Breads, Cakes, Cookies, and Pastries made with the finest Flour, Sugar, Eggs, Butter, and Frosting</small>
+    </footer>
+</div>
+</body>
+</html>

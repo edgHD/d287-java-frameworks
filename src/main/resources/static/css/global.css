@@ -1,0 +1,180 @@
+/* Base Styling - Sets bakery-themed warm background color and modern font */
+body {
+    background-color: #fff8f0;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Main Content Container - Creates a clean white surface for content with soft shadow */
+.container {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    margin-top: 20px;
+    max-width: 90%;
+}
+
+/* Typography - Main Heading */
+h1 {
+    color: #8b4513;
+    font-family: 'Georgia', serif;
+}
+
+/* Typography - Section Headings */
+h2 {
+    color: #a86432;
+    border-bottom: 2px solid #f8e0d0;
+    padding-bottom: 8px;
+    margin-top: 1.5rem;
+}
+
+/* Buttons - Primary Action Buttons */
+.btn-primary {
+    background-color: #d4a76a;
+    border-color: #c09358;
+}
+
+/* Buttons - Hover State */
+.btn-primary:hover {
+    background-color: #c09358;
+    border-color: #a36f2e;
+}
+
+/* Tables - Sets soft borders for data tables */
+.table {
+    border-color: #f8e0d0;
+}
+
+/* Table Headers - Makes headers stand out with bakery brown */
+.thead-dark th {
+    background-color: #8b4513;
+    color: white;
+}
+
+/* Bakery Icons - Emojis used throughout site for visual branding */
+.bakery-icon {
+    font-size: 1.5em;
+    margin-right: 8px;
+}
+
+/* Form Elements - Styling for input fields */
+.form-control {
+    border: 1px solid #d4a76a;
+    margin-bottom: 10px;
+}
+
+/* Subheading Text - Used for descriptive text beneath headings */
+.lead {
+    color: #6c757d;
+}
+
+/* Footer - Contains copyright and additional info */
+footer {
+    margin-top: 20px;
+    color: #6c757d;
+    text-align: center;
+    font-size: 0.9em;
+}
+
+/* Links - Text hyperlinks */
+a {
+    color: #8b4513;
+    text-decoration: none;
+}
+
+/* Links - Hover State */
+a:hover {
+    color: #d4a76a;
+    text-decoration: underline;
+}
+
+/* Search Functionality Section */
+
+/* Search Container - Creates a visually separate area for search controls */
+.search-container {
+    background-color: #f8e0d0; /* Light peach background */
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0 3px 5px rgba(139, 69, 19, 0.1);
+}
+
+/* Search Input Field - Custom styling for search boxes */
+.search-input {
+    border: 2px solid #d4a76a;
+    border-radius: 6px;
+    padding: 8px 12px;
+    width: 400px;
+    max-width: 100%;
+    font-size: 1rem;
+    background-color: #fff;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+/* Search Input - Focus State for better user feedback */
+.search-input:focus {
+    border-color: #8b4513;
+    box-shadow: 0 0 0 0.2rem rgba(139, 69, 19, 0.25);
+    outline: none;
+}
+
+/* Search Label - Text label for search fields */
+.search-label {
+    font-weight: bold;
+    color: #8b4513;
+    margin-right: 10px;
+    font-size: 1.1rem;
+}
+
+/* Search Button - Primary action button for search forms */
+.search-button {
+    background-color: #8b4513;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 8px 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+/* Search Button - Hover State */
+.search-button:hover {
+    background-color: #a36f2e;
+}
+
+/* Clear Button - Secondary action for clearing search fields */
+.clear-button {
+    background-color: #6c757d;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 8px 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+/* Clear Button - Hover State */
+.clear-button:hover {
+    background-color: #5a6268;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+/* Search Form Layout - Creates flexible form that works on various screen sizes */
+.search-form {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+}
+
+/* Button Container - Groups related buttons together */
+.button-container {
+    display: inline-flex;
+    gap: 10px;
+    margin-left: 10px;
+}
