@@ -13,7 +13,18 @@
 > - Lines 1-180: Added an approaching styling for Sweet Delights Bakery's website
 
 ### Part D:
-> Null
+> ADDED about.html:
+> - Lines 1-156: Wrote entire page about Sweet Delights Bakery's business
+>
+> CHANGED mainscreen.html:
+> - Lines 24-30: Added a Navigation to give access to the About page
+> - Lines 108-110: Added a direct link to the About page
+>
+> CHANGED MainScreenController.java:
+> - Lines 55-58: I mapped the URL path for About page
+> 
+> CHANGED global.css:
+> - Lines 91-119: Added style for outline buttons
 
 ### Part E:
 > Null
