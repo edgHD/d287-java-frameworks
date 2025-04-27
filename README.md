@@ -27,7 +27,9 @@
 > - Lines 91-119: Added style for outline buttons
 
 ### Part E:
-> Null
+> CHANGED MainScreenController.java:
+> - Line 3: Imported com.example.demo.domain.InhousePart
+> - Lines 77-124: Added sample bakery inventory with five ingredients and five goods to initialize the set when empty
 
 ### Part F:
 > Null
