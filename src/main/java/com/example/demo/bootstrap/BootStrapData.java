@@ -80,26 +80,36 @@ public class BootStrapData implements CommandLineRunner {
             flour.setName("Flour");
             flour.setPrice(1.99);
             flour.setInv(100);
-
+            flour.setMinInv(1);
+            flour.setMaxInv(100);
+            
             InhousePart sugar = new InhousePart();
             sugar.setName("Sugar");
             sugar.setPrice(0.99);
             sugar.setInv(50);
-
+            sugar.setMinInv(1);
+            sugar.setMaxInv(100);
+            
             InhousePart eggs = new InhousePart();
             eggs.setName("Eggs");
             eggs.setPrice(3.99);
             eggs.setInv(30);
-
+            eggs.setMinInv(1);
+            eggs.setMaxInv(100);
+            
             InhousePart butter = new InhousePart();
             butter.setName("Butter");
             butter.setPrice(2.49);
             butter.setInv(40);
-
+            butter.setMinInv(1);
+            butter.setMaxInv(100);
+            
             InhousePart vanillaExtract = new InhousePart();
             vanillaExtract.setName("Vanilla Extract");
             vanillaExtract.setPrice(5.49);
             vanillaExtract.setInv(20);
+            vanillaExtract.setMinInv(1);
+            vanillaExtract.setMaxInv(100);
 
             partRepository.save(flour);
             partRepository.save(sugar);

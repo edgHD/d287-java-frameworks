@@ -42,7 +42,27 @@
 > - Lines 65-94: Added a new 'BuyProduct' endpoint that decrements inventory when a good is purchased and also handles response output
 
 ### Part G:
-> Null
+> CHANGED Part.java:
+> - Line 7: I imported @Max validation constraint
+> - Lines 32-35: Added minInv and maxInv fields with proper validation constraints
+> - Lines 87-92: Modified setInv() method to enforce min/max inventory constraints
+> - Lines 96-111: Added getters and setters for new minimum and maximum inventory fields
+>
+> CHANGED mainscreen.html:
+> - Lines 52-53: Added 'Minimum' and 'Maximum' columns to the Ingredients table header
+> - Lines 62-63: Added display of minInv and maxInv values in table rows
+>
+> CHANGED InhousePartForm.html:
+> - Lines 31-36: Added input field for minimum and maximum inventory with validation error display
+>
+> CHANGED OutsourcedPartForm.html:
+> - Lines 32-37: Added input field for minimum and maximum inventory with validation error display
+>
+> CHANGED BootStrapData.java:
+> - Lines 78-112: Updated all sample ingredient data to include minInv=1 and maxInv=100
+>
+> CHANGED application.properties:
+> - Line 6: Changed database filename to 'sweet-delights-inventory' for persistent storage
 
 ### Part H:
 > Null

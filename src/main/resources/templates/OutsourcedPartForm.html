@@ -29,6 +29,12 @@
         <p><input type="text" th:field="*{inv}" placeholder="Quantity Available" class="form-control mb-4 col-4"/></p>
         <p th:if="${#fields.hasErrors('inv')}" th:errors="*{inv}" class="text-danger">Inventory Error</p>
 
+        <p><input type="text" th:field="*{minInv}" placeholder="Minimum Inventory" class="form-control mb-4 col-4"/></p>
+        <p th:if="${#fields.hasErrors('minInv')}" th:errors="*{minInv}" class="text-danger">Minimum Inventory Error</p>
+
+        <p><input type="text" th:field="*{maxInv}" placeholder="Maximum Inventory (max 100)" class="form-control mb-4 col-4"/></p>
+        <p th:if="${#fields.hasErrors('maxInv')}" th:errors="*{maxInv}" class="text-danger">Maximum Inventory Error</p>
+
         <p><input type="text" th:field="*{companyName}" placeholder="Supplier Name" class="form-control mb-4 col-4"/></p>
 
         <p><input type="submit" value="Save Ingredient" class="btn btn-primary" /></p>
