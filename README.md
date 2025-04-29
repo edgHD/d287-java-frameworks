@@ -43,7 +43,7 @@
 
 ### Part G:
 > CHANGED Part.java:
-> - Line 7: I imported @Max validation constraint
+> - Line 7: I imported Max validation constraint
 > - Lines 32-35: Added minInv and maxInv fields with proper validation constraints
 > - Lines 87-92: Modified setInv() method to enforce min/max inventory constraints
 > - Lines 96-111: Added getters and setters for new minimum and maximum inventory fields
