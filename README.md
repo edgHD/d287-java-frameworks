@@ -65,7 +65,19 @@
 > - Line 6: Changed database filename to 'sweet-delights-inventory' for persistent storage
 
 ### Part H:
-> Null
+> ADDED ValidInventory.java:
+> - Lines 1-17: Created a custom constraint annotation for validating inventory ranges
+>
+> ADDED InventoryValidator.java:
+> - Lines 1-62: Implemented a validator that checks if inventory ranges stay within minimum and maximum limits
+>
+> CHANGED Part.java:
+> - Lines 4 and 21: I integrated ValidInventory for centralized validation logic
+> - Line 34: Ensuring minimum inventory is positive (>= 1)
+> - Lines 87-92: Refactored the setInv(), setMinInv(), and setMaxInv() methods to rely on InventoryValidator.java
+>
+> CHANGED ValidEnufParts.java:
+> - Line 20: Updated default error message for clarity
 
 ### Part I:
 > Null
