@@ -32,7 +32,14 @@
 > - Lines 77-124: Added sample bakery inventory with five ingredients and five goods to initialize the set when empty
 
 ### Part F:
-> Null
+> CHANGED mainscreen.html:
+> - Lines 83-103: Added a script to show the appropriate alert for each purchase request
+> - Line 119: Added class 'product-inventory' on table data for better handling the script
+> - Line 123: Added 'Buy Now' button
+> 
+> CHANGED MainScreenController.java:
+> - Lines 13-16 and 19-20: I imported the necessary packages
+> - Lines 65-94: Added a new 'BuyProduct' endpoint that decrements inventory when a good is purchased and also handles response output
 
 ### Part G:
 > Null
