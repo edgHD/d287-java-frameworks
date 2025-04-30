@@ -80,7 +80,8 @@
 > - Line 20: Updated default error message for clarity
 
 ### Part I:
-> Null
+> CHANGED PartTest.java:
+> - Lines 159-176: Added two unit tests for the maximum and minimum fields
 
 ### Part J:
 > Null
