@@ -84,4 +84,14 @@
 > - Lines 159-176: Added two unit tests for the maximum and minimum fields
 
 ### Part J:
-> Null
+> REMOVED the following unused validator classes:
+> - ValidDeletePart.java
+> - DeletePartValidator.java
+> - ValidProductPrice.java
+> - PriceProductValidator.java
+> 
+> CHANGED Product.java:
+> - Lines 4 and 20: Removed import and annotation from removed ValidProductPrice class
+> 
+> CHANGED Part.java:
+> - Lines 3 and 20: Removed import and annotation from removed ValidDeletePart class

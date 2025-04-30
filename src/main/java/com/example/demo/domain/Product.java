@@ -1,10 +1,9 @@
 package com.example.demo.domain;
 
-import com.example.demo.validators.ValidInventory;
+import com.example.demo.validators.ValidEnufParts;
 
 import javax.persistence.*;
 import javax.validation.constraints.Min;
-import javax.validation.constraints.Max;
 import java.io.Serializable;
 import java.util.HashSet;
 import java.util.Set;
@@ -16,11 +15,9 @@ import java.util.Set;
  *
  */
 @Entity
-@ValidInventory
-@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
-@DiscriminatorColumn(name="part_type",discriminatorType = DiscriminatorType.INTEGER)
-@Table(name="Parts")
-public abstract class Part implements Serializable {
+@Table(name="Products")
+@ValidEnufParts
+public class Product implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     long id;
@@ -29,26 +26,19 @@ public abstract class Part implements Serializable {
     double price;
     @Min(value = 0, message = "Inventory value must be positive")
     int inv;
-    @Min(value = 1, message = "Minimum inventory value must be positive")
-    Integer minInv;
-    @Max(value = 100, message = "Maximum inventory value must not exceed 100")
-    Integer maxInv;
+    @ManyToMany(cascade=CascadeType.ALL, mappedBy = "products")
+    Set<Part> parts= new HashSet<>();
 
-    @ManyToMany
-    @JoinTable(name="product_part", joinColumns = @JoinColumn(name="part_id"),
-            inverseJoinColumns=@JoinColumn(name="product_id"))
-    Set<Product> products= new HashSet<>();
-
-    public Part() {
+    public Product() {
     }
 
-    public Part(String name, double price, int inv) {
+    public Product(String name, double price, int inv) {
         this.name = name;
         this.price = price;
         this.inv = inv;
     }
 
-    public Part(long id, String name, double price, int inv) {
+    public Product(long id, String name, double price, int inv) {
         this.id = id;
         this.name = name;
         this.price = price;
@@ -87,28 +77,12 @@ public abstract class Part implements Serializable {
         this.inv = inv;
     }
 
-    public Integer getMinInv() {
-        return minInv;
+    public Set<Part> getParts() {
+        return parts;
     }
 
-    public void setMinInv(Integer minInv) {
-        this.minInv = minInv;
-    }
-
-    public Integer getMaxInv() {
-        return maxInv;
-    }
-
-    public void setMaxInv(Integer maxInv) {
-        this.maxInv = maxInv;
-    }
-
-    public Set<Product> getProducts() {
-        return products;
-    }
-
-    public void setProducts(Set<Product> products) {
-        this.products = products;
+    public void setParts(Set<Part> parts) {
+        this.parts = parts;
     }
 
     public String toString(){
@@ -119,9 +93,9 @@ public abstract class Part implements Serializable {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
 
-        Part part = (Part) o;
+        Product product = (Product) o;
 
-        return id == part.id;
+        return id == product.id;
     }
 
     @Override
